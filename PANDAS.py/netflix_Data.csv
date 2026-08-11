@@ -1,0 +1,21 @@
+show_id,type,title,director,country,date_added,release_year,rating,duration,listed_in
+s1,Movie,Stranger Things,The Duffer Brothers,United States,"September 25, 2021",2016,TV-MA,4 Seasons,"TV Dramas, Sci-Fi"
+s2,TV Show,Sacred Games,Anurag Kashyap,India,"September 24, 2021",2018,TV-MA,2 Seasons,"Crime TV Shows, International"
+s3,Movie,Inception,Christopher Nolan,United States,"September 24, 2021",2010,PG-13,148 min,"Action, Sci-Fi"
+s4,Movie,3 Idiots,Rajkumar Hirani,India,"September 24, 2021",2009,PG-13,170 min,"Comedies, Dramas"
+s5,TV Show,Money Heist,,Spain,"September 10, 2021",2017,TV-MA,5 Seasons,Crime TV Shows
+s6,Movie,The Dark Knight,Christopher Nolan,United States,"September 1, 2021",2008,PG-13,152 min,"Action, Crime"
+s7,TV Show,Breaking Bad,,United States,"August 28, 2021",2008,TV-MA,5 Seasons,Crime TV Shows
+s8,Movie,Dangal,Nitesh Tiwari,India,"August 21, 2021",2016,PG,161 min,"Action, Dramas"
+s9,Movie,Interstellar,Christopher Nolan,United States,"August 15, 2021",2014,PG-13,169 min,"Sci-Fi, Adventure"
+s10,TV Show,Friends,,United States,"August 1, 2021",1994,TV-14,10 Seasons,TV Comedies
+s11,Movie,RRR,S.S. Rajamouli,India,"July 15, 2022",2022,TV-MA,187 min,"Action, Dramas"
+s12,Movie,Lagaan,Ashutosh Gowariker,India,"June 10, 2021",2001,PG,224 min,"Dramas, International"
+s13,TV Show,Squid Game,Hwang Dong-hyuk,South Korea,"September 17, 2021",2021,TV-MA,1 Season,"Action, Thriller"
+s14,Movie,Barfi!,Anurag Basu,India,"May 1, 2021",2012,PG-13,150 min,"Comedies, Dramas"
+s15,TV Show,Narcos,,Colombia,"November 1, 2020",2015,TV-MA,3 Seasons,Crime TV Shows
+s16,Movie,KGF Chapter 1,Prashanth Neel,India,"February 5, 2021",2018,TV-14,156 min,"Action, Thriller"
+s17,Movie,PK,Rajkumar Hirani,India,"January 1, 2021",2014,PG-13,153 min,"Comedies, Sci-Fi"
+s18,TV Show,The Office,,United States,"January 1, 2021",2005,TV-14,9 Seasons,TV Comedies
+s19,Movie,Jawan,Atlee,India,"November 2, 2023",2023,TV-14,169 min,"Action, Thriller"
+s20,TV Show,Kota Factory,Raghav Subbu,India,"September 24, 2021",2019,TV-14,2 Seasons,TV Dramas
