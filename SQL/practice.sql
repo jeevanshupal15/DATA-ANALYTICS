@@ -47,6 +47,34 @@ from student
 group by city 
  order by avg(marks) asc;
 
+ -- Q4  A :in the kids table change the name into full name
+ CREATE Table kids(
+    rollno int PRIMARY KEY,
+    name varchar(50),
+    marks INT NOT NULL,
+    grade varchar(10),
+    city VARCHAR(50)
+);
+INSERT INTO kids
+(rollno,name,marks,grade,city) 
+VALUES
+(101,'jeevanshu',90,'A','delhi'),
+(102,'abhinav',80,'B','mumbai'),
+(103,'vishu',85,'C','bangalore'),
+(104,'kallu',90,'A','delhi'),
+(105,'piyush',85,'B','chennai');
+
+SELECT * FROM kids;
+         ALTER TABLE student
+         CHANGE name full_name VARCHAR(50); 
+    --  B : delete all student who scored less than 80
+         DELETE FROM kids WHERE marks<80;
+
+    --  C : delete grade column  --
+    ALTER TABLE kids
+    DROP COLUMN grade;
+
+
  --Q4 find the total payment according to each payment method -- 
  CREATE TABLE payment(
     customer_id INT PRIMARY KEY,

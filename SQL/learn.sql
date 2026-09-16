@@ -119,5 +119,123 @@ WHERE marks < 30;
 
 SELECT * FROM students;
 
+# Foreign Key () REFERENCES ()
 
+CREATE TABLE department(
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
 
+INSERT INTO department
+(dept_id,dept_name)
+VALUES
+(1,'Computer Science'),
+(2,'Mathematics'),
+(3,'Physics'),
+(4,'Chemistry');
+
+UPDATE department
+SET dept_id = 4
+WHERE dept_id = 6;
+
+select * from department;
+
+CREATE Table teacher(
+    teacher_id INT PRIMARY KEY,
+    teacher_name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY(dept_id) REFERENCES department(dept_id)
+    on DELETE CASCADE -- when you delete a row in the parent table, the child table is also deleted 
+    on UPDATE CASCADE -- when you update a row in the parent table, the child table is also updated
+)
+
+INSERT INTO teacher
+(teacher_id,teacher_name,dept_id)
+VALUES
+(1,'Rahul',1),
+(2,'Ravi',2),
+(3,'Raj',3),
+(4,'Rajesh',4);
+
+select * from teacher;
+
+# alter table :- add column, drop column, modify column, rename column --
+
+ALTER TABLE teacher
+ADD COLUMN salary int NOT NULL DEFAULT 30000 ;
+
+ALTER TABLE teacher
+DROP COLUMN salary;
+
+ALTER TABLE teacher
+RENAME COLUMN new_salary TO salary;
+
+ALTER TABLE teacher 
+MODIFY COLUMN salary int NOT NULL DEFAULT 40000;
+
+# truncate table :- delete all rows from a table but not the structure of the table --
+TRUNCATE TABLE teacher;
+
+# join :- inner join, left join, right join, full outer join --
+# join :- used to combine rows from two or more tables based on a related column between them --
+SELECT * FROM student;
+SELECT * from city;
+
+# inner join :- returns records that have matching values in both tables --
+ --Alias = short name of table --
+SELECT * 
+FROM student AS s  
+INNER JOIN city AS c
+ON s.rollno = c.id;
+
+# left join :- returns all records from the left table and the matched records from the right table --
+SELECT *  
+FROM student AS s  
+LEFT JOIN city AS c
+ON s.rollno = c.id;
+
+# right join :- returns all records from the right table and the matched records from the left table --
+SELECT *    
+FROM student AS s  
+RIGHT JOIN city AS c
+ON s.rollno = c.id;
+
+# full outer join = union :- returns all records when there is match in left table and right table --
+SELECT *    
+FROM student AS s  
+FULL OUTER JOIN city AS c
+ON s.rollno = c.id;
+
+# left excluisive join :- returns all records from the left table and the unmatched records from the right table --
+SELECT *    
+FROM student AS s  
+LEFT OUTER JOIN city AS c
+ON s.rollno = c.id;
+
+# right excluisive join :- returns all records from the right table and the unmatched records from the left table --
+SELECT *    
+FROM student AS s  
+RIGHT OUTER JOIN city AS c
+ON s.rollno = c.id;
+
+# self join :- used to join a table to itself as if the table were two tables, temporarily renaming at least one table in the SQL statement --
+CREATE TABLE employee(
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    manager_id INT
+);
+INSERT INTO employee
+(id,name,manager_id)
+VALUES
+(1,'jeevanshu',4),
+(2,'abhinav',3),
+(3,'vishu',2),
+(4,'kallu',NULL),
+(5,'piyush',4);
+
+SELECT * FROM employee;
+
+SELECT * 
+FROM employee AS  a
+JOIN employee AS  b 
+ON a.id = b.manager_id;
